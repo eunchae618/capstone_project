@@ -1,0 +1,369 @@
+.community-page {
+  min-height: 100vh;
+  background-color: #4d6a7e;
+  padding-top: 99px;
+  color: #ffffff;
+}
+
+.community-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 8vh 5vw;
+}
+
+.community-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.community-title {
+  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  margin-bottom: 30px;
+}
+
+.community-description {
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.5;
+}
+
+.category-filter {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-size: 25px;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.category-btn.active {
+  background: #ffffff;
+  color: #4d6a7e;
+}
+
+.write-btn {
+  margin-left: auto;
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  font-family: 'VITRO INSPIRE TTF', sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.posts-list {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 20px;
+}
+
+.post-item {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-header {
+  margin-bottom: 15px;
+}
+
+.post-title {
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.post-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Bruno Ace SC', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.post-divider {
+  color: #ffffff;
+}
+
+.post-category {
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 16px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.page-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.page-btn img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 10px;
+}
+
+.page-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bruno Ace SC', sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.page-number.active {
+  background: #ffffff;
+  color: #000000;
+}
+
+.error-message {
+  color: #ffcccc;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(255, 68, 68, 0.2);
+  border-radius: 10px;
+}
+
+.loading-message {
+  color: #ffffff;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.no-posts {
+  color: #ffffff;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin: 40px 0;
+  opacity: 0.7;
+}
+
+.post-item {
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.post-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* 게시글 작성 모달 */
+.write-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.write-modal {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.write-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.write-modal-title {
+  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-size: 24px;
+  color: #002546;
+  margin: 0;
+}
+
+.write-modal-close {
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #999;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s;
+}
+
+.write-modal-close:hover {
+  color: #000;
+}
+
+.write-modal-form {
+  padding: 25px;
+}
+
+.write-form-group {
+  margin-bottom: 20px;
+}
+
+.write-form-label {
+  display: block;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #002546;
+  margin-bottom: 8px;
+}
+
+.write-form-select,
+.write-form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.write-form-select:focus,
+.write-form-input:focus {
+  border-color: #002546;
+}
+
+.write-form-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  resize: vertical;
+  min-height: 200px;
+  transition: border-color 0.3s;
+}
+
+.write-form-textarea:focus {
+  border-color: #002546;
+}
+
+.write-modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.write-btn-cancel,
+.write-btn-submit {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+}
+
+.write-btn-cancel {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.write-btn-cancel:hover {
+  background: #e0e0e0;
+}
+
+.write-btn-submit {
+  background: linear-gradient(135deg, #002546 0%, #004080 100%);
+  color: #ffffff;
+}
+
+.write-btn-submit:hover:not(:disabled) {
+  background: linear-gradient(135deg, #003d6b 0%, #0055a5 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 37, 70, 0.3);
+}
+
+.write-btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.post-like-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-left: 10px;
+}
+

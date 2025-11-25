@@ -1,0 +1,263 @@
+.event1-page {
+  min-height: 100vh;
+  background-color: #eaeaea;
+  padding-top: 99px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event1-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 8vh 5vw;
+  text-align: center;
+}
+
+.event1-title {
+  font-family: 'Bagel Fat One', sans-serif;
+  font-size: clamp(48px, 6vw, 96px);
+  color: #002546;
+  margin-bottom: 60px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.roulette-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roulette-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
+.roulette {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid #002546;
+  position: relative;
+  background: #ffffff;
+  transition: transform 3s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.roulette.spinning {
+  transform: rotate(1800deg);
+}
+
+.roulette-item {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  left: 50%;
+  transform-origin: 0 100%;
+  overflow: hidden;
+}
+
+.roulette-item.even {
+  background: #002546;
+  color: #ffffff;
+}
+
+.roulette-item.odd {
+  background: #ffffff;
+  color: #002546;
+}
+
+.prize-content {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+
+.prize-name {
+  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-size: clamp(20px, 6vw, 50px);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.prize-amount {
+  font-family: 'Bruno Ace SC', sans-serif;
+  font-size: clamp(12px, 2.5vw, 20px);
+}
+
+.prize-text {
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: clamp(12px, 2.5vw, 20px);
+}
+
+.roulette-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 27%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border: 3px solid #002546;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.roulette-center::before {
+  content: '';
+  position: absolute;
+  width: 88%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.spin-button {
+  position: relative;
+  z-index: 11;
+  font-family: 'Baloo Bhaijaan', sans-serif;
+  font-size: clamp(24px, 6vw, 50px);
+  color: #002546;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.spin-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.result-modal {
+  margin-top: 50px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  border: 3px solid #002546;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-title {
+  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  color: #002546;
+  margin-bottom: 20px;
+}
+
+.result-text {
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: clamp(20px, 3vw, 32px);
+  color: #000000;
+}
+
+.verification-required {
+  margin-bottom: 40px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.lock-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.lock-message {
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: clamp(20px, 3vw, 28px);
+  color: #002546;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.verify-link-button {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #002546;
+  border: 2px solid #002546;
+  border-radius: 12px;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.verify-link-button:hover {
+  background: #003d6b;
+  border-color: #003d6b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 37, 70, 0.3);
+}
+
+.roulette-section.locked {
+  opacity: 0.5;
+  pointer-events: none;
+  position: relative;
+}
+
+.roulette.disabled {
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+.roulette-section.locked::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  z-index: 5;
+}
+
+@media (max-width: 768px) {
+  .roulette-wrapper {
+    max-width: 90vw;
+    max-height: 90vw;
+  }
+
+  .roulette-center {
+    width: 30%;
+  }
+
+  .result-modal {
+    padding: 30px 20px;
+    margin-top: 30px;
+  }
+}
+

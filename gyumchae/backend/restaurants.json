@@ -1,0 +1,45 @@
+{
+  "restaurants": [
+    {
+      "name": "상린",
+      "category": "음식점",
+      "description": "한림대 주변 인기 음식점",
+      "menu": ["다양한 메뉴"],
+      "price_range": "보통",
+      "address": "강원도 춘천시 동면 한림대학교 주변"
+    },
+    {
+      "name": "푸릉",
+      "category": "음식점",
+      "description": "한림대 주변 맛집",
+      "menu": ["다양한 메뉴"],
+      "price_range": "보통",
+      "address": "강원도 춘천시 동면 한림대학교 주변"
+    },
+    {
+      "name": "동신냉삼집",
+      "category": "음식점",
+      "description": "한림대 주변 냉삼 전문점, 숙성고기로 유명",
+      "menu": ["냉삼", "숙성고기"],
+      "price_range": "보통",
+      "address": "강원도 춘천시 동면 한림대학교 주변"
+    },
+    {
+      "name": "향리원 마라탕",
+      "category": "음식점",
+      "description": "한림대 주변 마라탕 전문점, 매운맛 단계 선택 가능",
+      "menu": ["마라탕"],
+      "price_range": "보통",
+      "address": "강원도 춘천시 동면 한림대학교 주변"
+    },
+    {
+      "name": "한림양장",
+      "category": "음식점",
+      "description": "한림대 주변 양식당",
+      "menu": ["양식"],
+      "price_range": "보통",
+      "address": "강원도 춘천시 동면 한림대학교 주변"
+    }
+  ]
+}
+

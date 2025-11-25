@@ -1,0 +1,499 @@
+.map-page {
+  min-height: 125vh;
+  background: linear-gradient(180deg, #002546 0%, rgba(0, 37, 70, 0.64) 51.92%, rgba(231, 231, 231, 0.66) 100%);
+  padding-top: 99px;
+  padding-bottom: 50px;
+}
+
+.map-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3vh 4vw;
+}
+
+.map-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.map-area {
+  width: 100%;
+  min-height: 500px;
+  height: calc(100vh - 99px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 검색 UI 오버레이 - 왼쪽 위에 배치 */
+.search-top-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+.search-box-top {
+  position: relative;
+  width: 500px;
+  max-width: calc(100vw - 40px);
+  height: 60px;
+  background: rgba(200, 200, 200, 0.95);
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  gap: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.search-input-top {
+  flex: 1;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #040404;
+  padding: 0;
+}
+
+.search-input-top::placeholder {
+  color: #666666;
+}
+
+.search-input-top:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.search-loading-top {
+  position: absolute;
+  right: 80px;
+  font-size: 14px;
+  color: #002546;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+}
+
+.search-btn-top {
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.search-btn-top:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.search-btn-top svg {
+  width: 24px;
+  height: 24px;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.search-btn-top:hover:not(:disabled) svg {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .search-top-overlay {
+    top: 10px;
+    left: 10px;
+  }
+  
+  .search-box-top {
+    width: calc(100vw - 20px);
+    height: 60px;
+    padding: 0 15px;
+  }
+  
+  .search-input-top {
+    font-size: 16px;
+  }
+  
+  .search-btn-top {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* 카테고리 UI 오버레이 - 오른쪽에 고정 */
+.map-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.search-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 211px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 20px 15px;
+  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.15);
+  pointer-events: auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .search-overlay {
+    width: 100%;
+    max-width: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: auto;
+    max-height: 50%;
+    bottom: 0;
+    top: auto;
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+/* 지도 컨테이너가 제대로 표시되도록 보장 */
+.map-area .naver-map {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 400px;
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.search-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.search-input-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  height: 42px;
+  padding: 0 14px;
+  background: #ffffff;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 14px;
+  color: #040404;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  border-color: #002546;
+  box-shadow: 0 4px 8px rgba(0, 37, 70, 0.15);
+}
+
+.search-input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.search-input::placeholder {
+  color: #999999;
+}
+
+.search-loading {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #002546;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+}
+
+.search-btn {
+  width: 100%;
+  height: 42px;
+  background: linear-gradient(135deg, #002546 0%, #004080 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 37, 70, 0.2);
+}
+
+.search-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #003d6b 0%, #0055a5 100%);
+  box-shadow: 0 4px 12px rgba(0, 37, 70, 0.3);
+  transform: translateY(-1px);
+}
+
+.search-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.search-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.search-btn.searching {
+  background: linear-gradient(135deg, #666 0%, #888 100%);
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.category-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category-title {
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #002546;
+  margin-bottom: 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e8e8e8;
+}
+
+.sort-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+  background: linear-gradient(135deg, rgba(0, 37, 70, 0.05) 0%, rgba(0, 37, 70, 0.02) 100%);
+  border-radius: 12px;
+  border: 1px solid #e8e8e8;
+}
+
+.sort-label-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.sort-icon {
+  font-size: 18px;
+}
+
+.sort-label {
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #002546;
+}
+
+.sort-options {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.sort-option {
+  flex: 1;
+  padding: 10px 8px;
+  background: #ffffff;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 13px;
+  color: #666666;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.sort-option:hover {
+  border-color: #002546;
+  color: #002546;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 37, 70, 0.1);
+}
+
+.sort-option.active {
+  background: linear-gradient(135deg, #002546 0%, #004080 100%);
+  border-color: #002546;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 37, 70, 0.2);
+}
+
+.sort-option-icon {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.category-item {
+  padding: 14px 16px;
+  background: #ffffff;
+  border: 2px solid #e8e8e8;
+  border-radius: 10px;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 15px;
+  color: #333333;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.category-item:hover {
+  border-color: #002546;
+  transform: translateX(4px);
+  box-shadow: 0 2px 6px rgba(0, 37, 70, 0.15);
+}
+
+.category-item.active {
+  background: linear-gradient(135deg, #002546 0%, #004080 100%);
+  border-color: #002546;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 37, 70, 0.25);
+  transform: translateX(4px);
+}
+
+.category-icon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.naver-map {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.places-list {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #484848;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.places-title {
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.places-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.place-item {
+  padding: 12px;
+  background: rgba(232, 232, 232, 0.5);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.place-item:hover {
+  background: rgba(232, 232, 232, 0.8);
+  border-color: #002546;
+  transform: translateX(5px);
+}
+
+.place-name {
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 6px;
+}
+
+.place-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 13px;
+  color: #666666;
+}
+
+.place-rating {
+  font-weight: 600;
+  color: #FF6B35;
+}
+
+.place-address {
+  font-size: 12px;
+  color: #999999;
+}
+

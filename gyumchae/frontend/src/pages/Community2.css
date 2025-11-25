@@ -1,0 +1,104 @@
+.community2-page {
+  min-height: 100vh;
+  background-color: #4d6a7e;
+  padding-top: 99px;
+  color: #ffffff;
+}
+
+.community2-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 8vh 5vw;
+}
+
+.community2-title {
+  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.review-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+  min-height: 314px;
+}
+
+.review-quote {
+  font-size: 50px;
+  color: #000000;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.review-text {
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: clamp(18px, 2vw, 24px);
+  color: #000000;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  min-height: 140px;
+}
+
+.review-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.review-store {
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 24px;
+  color: #fe8455;
+  font-weight: 500;
+}
+
+.review-date {
+  font-family: 'Bruno Ace SC', sans-serif;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.write-review-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.write-review-btn {
+  display: inline-block;
+  width: 264px;
+  height: 46px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+

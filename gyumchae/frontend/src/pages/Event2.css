@@ -1,0 +1,88 @@
+.event2-page {
+  min-height: 100vh;
+  background-color: #eaeaea;
+  padding-top: 99px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event2-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 8vh 5vw;
+  text-align: center;
+}
+
+.event2-title {
+  font-family: 'Bagel Fat One', sans-serif;
+  font-size: clamp(48px, 6vw, 96px);
+  color: #002546;
+  margin-bottom: 60px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.scratch-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scratch-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 726px;
+  aspect-ratio: 726 / 417;
+  margin: 0 auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.scratch-canvas {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  cursor: crosshair;
+  touch-action: none;
+  display: block;
+}
+
+.scratch-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.scratch-line {
+  width: 80%;
+  max-width: 383px;
+  height: 2px;
+  background: #ffffff;
+  margin: 20px 0;
+}
+
+.scratch-text {
+  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .scratch-wrapper {
+    max-width: 90vw;
+  }
+}
+

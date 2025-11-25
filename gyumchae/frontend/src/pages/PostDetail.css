@@ -1,0 +1,253 @@
+.post-detail-page {
+  min-height: 100vh;
+  background-color: #4d6a7e;
+  padding-top: 99px;
+  color: #ffffff;
+}
+
+.post-detail-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 5vw;
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: all 0.3s;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-3px);
+}
+
+.post-detail {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.post-detail-header {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.post-detail-category {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.post-detail-title {
+  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-size: clamp(24px, 3vw, 32px);
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.post-detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.post-detail-divider {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.post-detail-content {
+  margin-bottom: 25px;
+  min-height: 100px;
+}
+
+.post-content-text {
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  color: #ffffff;
+}
+
+.post-detail-actions {
+  display: flex;
+  gap: 15px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.like-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.like-button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.like-button.liked {
+  border-color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.2);
+}
+
+.like-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.like-icon {
+  font-size: 18px;
+}
+
+.like-count {
+  font-weight: 600;
+}
+
+.comments-section {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.comments-title {
+  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.comment-form {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.comment-input {
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 14px;
+  resize: vertical;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.comment-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.comment-input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.comment-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.comment-submit-btn {
+  background: linear-gradient(135deg, #002546 0%, #004080 100%);
+  border: none;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.comment-submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #003d6b 0%, #0055a5 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 37, 70, 0.3);
+}
+
+.comment-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.comment-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 15px;
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.comment-content {
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+.comment-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.comment-date {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.no-comments {
+  text-align: center;
+  padding: 40px;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 14px;
+}
+
+.loading-message {
+  text-align: center;
+  padding: 40px;
+  color: #ffffff;
+  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-size: 16px;
+}
+
