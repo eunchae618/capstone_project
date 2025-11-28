@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Cafe24Surround";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff")
+    format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
 .community-page {
   min-height: 100vh;
   background-color: #4d6a7e;
@@ -18,13 +26,13 @@
 }
 
 .community-title {
-  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-family: "Cafe24Surround";
   font-size: clamp(32px, 4vw, 48px);
   margin-bottom: 30px;
 }
 
 .community-description {
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: clamp(18px, 2vw, 24px);
   line-height: 1.5;
 }
@@ -43,7 +51,7 @@
   padding: 10px 20px;
   background: transparent;
   border: none;
-  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-family: "Cafe24 Ssurround", sans-serif;
   font-size: 25px;
   color: #ffffff;
   cursor: pointer;
@@ -60,7 +68,7 @@
   padding: 10px 20px;
   background: transparent;
   border: none;
-  font-family: 'VITRO INSPIRE TTF', sans-serif;
+  font-family: "VITRO INSPIRE TTF", sans-serif;
   font-size: 24px;
   color: #ffffff;
   cursor: pointer;
@@ -86,7 +94,7 @@
 }
 
 .post-title {
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: 20px;
   color: #ffffff;
 }
@@ -95,7 +103,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Bruno Ace SC', sans-serif;
+  font-family: "Bruno Ace SC", sans-serif;
   font-size: 16px;
   color: #ffffff;
 }
@@ -105,7 +113,7 @@
 }
 
 .post-category {
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: 16px;
 }
 
@@ -150,7 +158,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Bruno Ace SC', sans-serif;
+  font-family: "Bruno Ace SC", sans-serif;
   font-size: 24px;
   color: #ffffff;
   cursor: pointer;
@@ -163,7 +171,7 @@
 
 .error-message {
   color: #ffcccc;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: 16px;
   text-align: center;
   margin: 20px 0;
@@ -174,7 +182,7 @@
 
 .loading-message {
   color: #ffffff;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: 18px;
   text-align: center;
   margin: 40px 0;
@@ -182,7 +190,7 @@
 
 .no-posts {
   color: #ffffff;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: 18px;
   text-align: center;
   margin: 40px 0;
@@ -232,7 +240,7 @@
 }
 
 .write-modal-title {
-  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-family: "Cafe24 Ssurround", sans-serif;
   font-size: 24px;
   color: #002546;
   margin: 0;
@@ -268,7 +276,7 @@
 
 .write-form-label {
   display: block;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #002546;
@@ -281,7 +289,7 @@
   padding: 12px 15px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: 14px;
   color: #333;
   outline: none;
@@ -298,7 +306,7 @@
   padding: 12px 15px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: 14px;
   color: #333;
   outline: none;
@@ -324,7 +332,7 @@
 .write-btn-submit {
   padding: 12px 24px;
   border-radius: 8px;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -361,9 +369,8 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.8);
   margin-left: 10px;
 }
-

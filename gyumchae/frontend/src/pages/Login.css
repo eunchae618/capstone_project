@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Cafe24Surround";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff")
+    format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
 .login-page {
   min-height: 100vh;
   background-color: #ffffff;
@@ -14,7 +22,7 @@
 }
 
 .login-title {
-  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-family: "Cafe24Surround";
   font-size: clamp(32px, 4vw, 48px);
   color: #002546;
   text-align: center;
@@ -36,7 +44,7 @@
   padding: 15px 0;
   border: none;
   border-bottom: 1px solid #a1a1a1;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: clamp(20px, 2.5vw, 32px);
   color: #a1a1a1;
   background: transparent;
@@ -57,13 +65,13 @@
 }
 
 .login-button {
+  font-family: "Cafe24Surround";
   width: 100%;
   max-width: 273px;
   height: 52px;
   margin: 30px auto;
   border: 1px solid #002546;
   background: transparent;
-  font-family: 'Gmarket Sans TTF', sans-serif;
   font-size: clamp(18px, 2vw, 24px);
   color: #002546;
   cursor: pointer;
@@ -78,8 +86,7 @@
 }
 
 .link-text {
-  font-family: 'Gmarket Sans TTF', sans-serif;
-  font-size: 16px;
+  font-family: "Gmarket Sans TTF";
   color: #b3b3b3;
   text-decoration: none;
   border-bottom: 1px solid rgba(179, 179, 179, 0.55);
@@ -88,7 +95,7 @@
 
 .error-message {
   color: #ff4444;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF";
   font-size: 14px;
   text-align: center;
   margin-bottom: 10px;
@@ -101,4 +108,3 @@
   opacity: 0.6;
   cursor: not-allowed;
 }
-

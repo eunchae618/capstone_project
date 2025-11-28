@@ -8,15 +8,22 @@
 }
 
 .event-page::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(255, 255, 255, 0.03) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 255, 255, 0.03) 0%,
+      transparent 50%
+    );
   pointer-events: none;
 }
 
@@ -30,7 +37,7 @@
 }
 
 .event-title {
-  font-family: 'Bagel Fat One', sans-serif;
+  font-family: "Bagel Fat One", sans-serif;
   font-size: clamp(48px, 6vw, 96px);
   text-align: center;
   margin-bottom: 80px;
@@ -111,7 +118,7 @@
 }
 
 .camera-text {
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: clamp(20px, 2.5vw, 28px);
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 10px;
@@ -119,7 +126,7 @@
 }
 
 .camera-subtext {
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: clamp(14px, 1.8vw, 18px);
   color: rgba(255, 255, 255, 0.6);
 }
@@ -143,7 +150,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: clamp(16px, 2vw, 20px);
   font-weight: 600;
   color: #ffffff;
@@ -171,7 +178,7 @@
 }
 
 .status-title {
-  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-family: "Cafe24 Ssurround", sans-serif;
   font-size: clamp(28px, 4vw, 48px);
   text-align: center;
   margin-bottom: 30px;
@@ -194,7 +201,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: clamp(16px, 2.5vw, 24px);
   color: rgba(255, 255, 255, 0.95);
   transition: all 0.3s ease;
@@ -205,11 +212,14 @@
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-
 .verification-success {
   margin-top: 24px;
   padding: 24px;
-  background: linear-gradient(135deg, rgba(76, 175, 80, 0.2) 0%, rgba(76, 175, 80, 0.15) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(76, 175, 80, 0.2) 0%,
+    rgba(76, 175, 80, 0.15) 100%
+  );
   border: 2px solid rgba(76, 175, 80, 0.4);
   border-radius: 16px;
   text-align: center;
@@ -222,7 +232,11 @@
   width: 56px;
   height: 56px;
   margin: 0 auto 12px;
-  background: linear-gradient(135deg, rgba(76, 175, 80, 0.9) 0%, rgba(56, 142, 60, 0.9) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(76, 175, 80, 0.9) 0%,
+    rgba(56, 142, 60, 0.9) 100%
+  );
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -234,7 +248,7 @@
 }
 
 .success-text {
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: clamp(16px, 2vw, 20px);
   color: rgba(255, 255, 255, 0.95);
   margin: 0;
@@ -248,7 +262,7 @@
   background: rgba(255, 255, 255, 0.2);
   border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 12px;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: clamp(16px, 2vw, 20px);
   font-weight: 500;
   color: #ffffff;
@@ -283,7 +297,7 @@
 
 .roulette-pointer {
   position: absolute;
-  top: -15px;
+  top: -35px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 25;
@@ -294,7 +308,8 @@
 }
 
 @keyframes pointerPulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(-50%) scale(1);
   }
   50% {
@@ -325,7 +340,8 @@
 .roulette-svg.spinning {
   --final-rotation: 2520deg;
   --spin-duration: 5500ms;
-  animation: rouletteSpin var(--spin-duration, 5500ms) cubic-bezier(0.17, 0.67, 0.12, 0.99) forwards;
+  animation: rouletteSpin var(--spin-duration, 5500ms)
+    cubic-bezier(0.17, 0.67, 0.12, 0.99) forwards;
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3)) brightness(1.1);
 }
 
@@ -373,7 +389,7 @@
 }
 
 .roulette-center::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 88%;
   aspect-ratio: 1 / 1;
@@ -384,8 +400,8 @@
 .spin-button {
   position: relative;
   z-index: 16;
-  font-family: 'Baloo Bhaijaan', sans-serif;
-  font-size: clamp(20px, 4vw, 36px);
+  font-family: "Baloo Bhaijaan", sans-serif;
+  font-size: clamp(16px, 3vw, 28px);
   color: #002546;
   background: transparent;
   border: none;
@@ -421,7 +437,8 @@
   justify-content: center;
   backdrop-filter: blur(20px);
   border: 3px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 0 30px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 .overlay-icon {
@@ -431,7 +448,7 @@
 }
 
 .overlay-message {
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: clamp(14px, 2vw, 18px);
   color: rgba(255, 255, 255, 0.95);
   font-weight: 500;
@@ -453,7 +470,11 @@
 }
 
 .result-content {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
   border-radius: 24px;
   padding: 50px 40px;
   text-align: center;
@@ -469,7 +490,8 @@
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -478,7 +500,7 @@
 }
 
 .result-title {
-  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-family: "Cafe24 Ssurround", sans-serif;
   font-size: clamp(32px, 4vw, 48px);
   color: #002546;
   margin-bottom: 16px;
@@ -486,7 +508,7 @@
 }
 
 .result-text {
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: clamp(20px, 3vw, 32px);
   color: #002546;
   font-weight: 600;
@@ -502,4 +524,3 @@
     transform: translateY(0);
   }
 }
-

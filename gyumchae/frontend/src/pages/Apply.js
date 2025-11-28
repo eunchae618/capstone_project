@@ -1,28 +1,37 @@
-import React, { useState } from 'react';
-import './Apply.css';
+import React, { useState } from "react";
+import "./Apply.css";
 
 const Apply = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    taxId: '',
-    phoneNumber: '',
-    email: '',
-    companyName: '',
-    title: '',
-    details: ''
+    name: "",
+    taxId: "",
+    phoneNumber: "",
+    email: "",
+    companyName: "",
+    title: "",
+    details: "",
   });
+  const [isPolicyOpen, setIsPolicyOpen] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // 신청 로직 구현
-    console.log('Apply:', formData);
+    console.log("Apply:", formData);
+  };
+
+  const handleInquiry = () => {
+    alert("문의가 정상적으로 접수되었습니다!");
+  };
+
+  const togglePolicy = () => {
+    setIsPolicyOpen((prev) => !prev);
   };
 
   return (
@@ -137,12 +146,40 @@ const Apply = () => {
           </div>
 
           <div className="form-footer">
-            <label className="checkbox-label">
-              <input type="checkbox" className="checkbox-input" />
-              <img src={`${process.env.PUBLIC_URL}/images/check_b.png`} alt="체크박스" className="checkbox-icon" />
-              개인정보수집 동의 [보기]
-            </label>
-            <button type="button" className="inquiry-button">문의하기</button>
+            <div className="policy-section">
+              <label className="checkbox-label">
+                <input type="checkbox" className="checkbox-input" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/check_b.png`}
+                  alt="체크박스"
+                  className="checkbox-icon"
+                />
+                개인정보수집 동의{" "}
+                <button
+                  type="button"
+                  className="policy-toggle"
+                  onClick={togglePolicy}
+                >
+                  {isPolicyOpen ? "[닫기]" : "[보기]"}
+                </button>
+              </label>
+              {isPolicyOpen && (
+                <div className="policy-panel">
+                  본인은 이름, 전화번호, 사업자등록번호, 이메일을 신청 확인 및
+                  안내 제공을 위해 수집·이용하는 데 동의하며, 해당 정보는
+                  수집일로부터 1년간 보유 후 파기되는 것에 동의합니다. 개인정보
+                  제공은 거부할 수 있으나, 동의하지 않을 경우 서비스 이용이
+                  제한될 수 있음을 안내받았습니다.
+                </div>
+              )}
+            </div>
+            <button
+              type="button"
+              className="inquiry-button"
+              onClick={handleInquiry}
+            >
+              문의하기
+            </button>
           </div>
         </form>
       </div>
@@ -151,4 +188,3 @@ const Apply = () => {
 };
 
 export default Apply;
-

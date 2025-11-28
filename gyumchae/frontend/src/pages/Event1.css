@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Cafe24Surround";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff")
+    format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+.event-title {
+  font-family: "Cafe24Surround";
+}
+
 .event1-page {
   min-height: 100vh;
   background-color: #eaeaea;
@@ -16,7 +28,7 @@
 }
 
 .event1-title {
-  font-family: 'Bagel Fat One', sans-serif;
+  font-family: "Cafe24Surround";
   font-size: clamp(48px, 6vw, 96px);
   color: #002546;
   margin-bottom: 60px;
@@ -83,19 +95,19 @@
 }
 
 .prize-name {
-  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-family: "Cafe24 Ssurround", sans-serif;
   font-size: clamp(20px, 6vw, 50px);
   font-weight: 700;
   margin-bottom: 5px;
 }
 
 .prize-amount {
-  font-family: 'Bruno Ace SC', sans-serif;
+  font-family: "Bruno Ace SC", sans-serif;
   font-size: clamp(12px, 2.5vw, 20px);
 }
 
 .prize-text {
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: clamp(12px, 2.5vw, 20px);
 }
 
@@ -117,7 +129,7 @@
 }
 
 .roulette-center::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 88%;
   aspect-ratio: 1 / 1;
@@ -128,7 +140,7 @@
 .spin-button {
   position: relative;
   z-index: 11;
-  font-family: 'Baloo Bhaijaan', sans-serif;
+  font-family: "Baloo Bhaijaan", sans-serif;
   font-size: clamp(24px, 6vw, 50px);
   color: #002546;
   background: transparent;
@@ -167,14 +179,14 @@
 }
 
 .result-title {
-  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-family: "Cafe24 Ssurround", sans-serif;
   font-size: clamp(32px, 4vw, 48px);
   color: #002546;
   margin-bottom: 20px;
 }
 
 .result-text {
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: clamp(20px, 3vw, 32px);
   color: #000000;
 }
@@ -194,7 +206,7 @@
 }
 
 .lock-message {
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: clamp(20px, 3vw, 28px);
   color: #002546;
   margin-bottom: 30px;
@@ -207,7 +219,7 @@
   background: #002546;
   border: 2px solid #002546;
   border-radius: 12px;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: clamp(16px, 2vw, 20px);
   font-weight: 500;
   color: #ffffff;
@@ -234,7 +246,7 @@
 }
 
 .roulette-section.locked::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -260,4 +272,3 @@
     margin-top: 30px;
   }
 }
-

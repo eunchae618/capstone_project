@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "BagelFat";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/BagelFatOne-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+
 .apply-page {
   min-height: 100vh;
   background-color: #ffffff;
@@ -17,14 +25,14 @@
 }
 
 .apply-main-title {
-  font-family: 'Bagel Fat One', sans-serif;
+  font-family: "BagelFat";
   font-size: 48px;
   color: #000000;
   margin-bottom: 10px;
 }
 
 .apply-subtitle {
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: 15px;
   color: #000000;
 }
@@ -54,7 +62,7 @@
 }
 
 .form-label {
-  font-family: 'Baloo Bhaijaan', sans-serif;
+  font-family: "Baloo Bhaijaan", sans-serif;
   font-size: clamp(24px, 3vw, 36px);
   color: #000000;
   margin-bottom: 20px;
@@ -68,7 +76,7 @@
   padding: 10px 0;
   border: none;
   border-bottom: 1px solid #a1a1a1;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: 16px;
   color: #a1a1a1;
   background: transparent;
@@ -83,7 +91,7 @@
   padding: 15px;
   border: 1px solid #a1a1a1;
   border-radius: 5px;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: 16px;
   color: #000000;
   background: transparent;
@@ -109,12 +117,44 @@
 }
 
 .checkbox-label {
-  font-family: 'Jomolhari', sans-serif;
+  font-family: "Jomolhari", sans-serif;
   font-size: 14px;
   color: #000000;
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.policy-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 620px;
+}
+
+.policy-toggle {
+  border: none;
+  background: none;
+  font-family: "Gmarket Sans TTF", sans-serif;
+  font-size: 14px;
+  color: #0070f3;
+  cursor: pointer;
+  padding: 0;
+}
+
+.policy-toggle:hover {
+  text-decoration: underline;
+}
+
+.policy-panel {
+  font-family: "Gmarket Sans TTF", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #333333;
+  background: #f7f7f7;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 16px 20px;
 }
 
 .checkbox-input {
@@ -133,9 +173,8 @@
   border: 1px solid #000000;
   border-radius: 26px;
   background: transparent;
-  font-family: 'Cafe24 Ssurround', sans-serif;
+  font-family: "Cafe24 Ssurround", sans-serif;
   font-size: 15px;
   color: #000000;
   cursor: pointer;
 }
-

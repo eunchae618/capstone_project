@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Cafe24Surround";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff")
+    format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+.chat-title {
+  font-family: "Cafe24Surround";
+}
+
 .aichat-page {
   min-height: 100vh;
   background: #f5f5f5;
@@ -32,7 +44,7 @@
 }
 
 .chat-title {
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: #ffffff;
@@ -109,7 +121,7 @@
 }
 
 .message-text {
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: 14px;
   line-height: 1.6;
   margin: 0;
@@ -144,7 +156,9 @@
 }
 
 @keyframes typing {
-  0%, 60%, 100% {
+  0%,
+  60%,
+  100% {
     transform: translateY(0);
     opacity: 0.7;
   }
@@ -171,7 +185,7 @@
   background: #f5f5f5;
   border: 1px solid #e0e0e0;
   border-radius: 20px;
-  font-family: 'Gmarket Sans TTF', sans-serif;
+  font-family: "Gmarket Sans TTF", sans-serif;
   font-size: 14px;
   color: #000000;
   outline: none;
@@ -238,13 +252,12 @@
     margin: 0;
     border-radius: 0;
   }
-  
+
   .chat-messages {
     padding: 12px;
   }
-  
+
   .message-bubble {
     max-width: 85%;
   }
 }
-

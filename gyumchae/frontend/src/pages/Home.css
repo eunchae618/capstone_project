@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Cafe24Surround";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff")
+    format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BagelFat";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/BagelFatOne-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+
 .home {
   padding-top: 99px;
   background-color: #eaeaea;
@@ -105,7 +121,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Cafe24 Ssurround", sans-serif;
+  font-family: "Cafe24Surround", sans-serif;
   font-size: 20px;
   font-weight: 700;
   color: #000000;
@@ -118,7 +134,7 @@
   position: absolute;
   left: 177px;
   top: 745px;
-  font-family: "Bagel Fat One", sans-serif;
+  font-family: "BagelFat";
   font-size: 64px;
   line-height: 92.67px;
   color: #ffffff;
@@ -148,7 +164,7 @@
 }
 
 .section-title {
-  font-family: "Cafe24 Ssurround OTF", sans-serif;
+  font-family: "Cafe24Surround";
   font-size: clamp(24px, 3.5vw, 42px);
   color: #000000;
   line-height: 1.3;
@@ -168,9 +184,9 @@
 }
 
 .stores-slider-container {
-  width: 100%;
+  width: 100vw;
   position: relative;
-  margin: 60px 0;
+  margin: 60px calc((100vw - 100%) / -2);
 }
 
 .stores-section {
@@ -196,7 +212,7 @@
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: center;
   left: 50%;
-  transform: translateX(-50%) translateX(calc(var(--position) * 400px))
+  transform: translateX(-50%) translateX(calc(var(--position) * 450px))
     scale(calc(1 - var(--distance) * 0.15));
   opacity: calc(1 - var(--distance) * 0.3);
   z-index: calc(10 - var(--distance));
@@ -229,12 +245,12 @@
 
 /* 좌우 카드 위치 조정 */
 .store-card-pos--2 {
-  transform: translateX(-50%) translateX(-800px) scale(0.7);
+  transform: translateX(-50%) translateX(-900px) scale(0.7);
   opacity: 0.4;
 }
 
 .store-card-pos--1 {
-  transform: translateX(-50%) translateX(-400px) scale(0.85);
+  transform: translateX(-50%) translateX(-450px) scale(0.85);
   opacity: 0.7;
 }
 
@@ -244,12 +260,12 @@
 }
 
 .store-card-pos-1 {
-  transform: translateX(-50%) translateX(400px) scale(0.85);
+  transform: translateX(-50%) translateX(450px) scale(0.85);
   opacity: 0.7;
 }
 
 .store-card-pos-2 {
-  transform: translateX(-50%) translateX(800px) scale(0.7);
+  transform: translateX(-50%) translateX(900px) scale(0.7);
   opacity: 0.4;
 }
 
@@ -264,19 +280,19 @@
   }
 
   .store-card-pos--2 {
-    transform: translateX(-50%) translateX(-600px) scale(0.6);
+    transform: translateX(-50%) translateX(-675px) scale(0.6);
   }
 
   .store-card-pos--1 {
-    transform: translateX(-50%) translateX(-300px) scale(0.8);
+    transform: translateX(-50%) translateX(-337px) scale(0.8);
   }
 
   .store-card-pos-1 {
-    transform: translateX(-50%) translateX(300px) scale(0.8);
+    transform: translateX(-50%) translateX(337px) scale(0.8);
   }
 
   .store-card-pos-2 {
-    transform: translateX(-50%) translateX(600px) scale(0.6);
+    transform: translateX(-50%) translateX(675px) scale(0.6);
   }
 }
 
@@ -620,7 +636,7 @@
 }
 
 .apply-title {
-  font-family: "Baloo Bhaijaan", sans-serif;
+  font-family: "Cafe24Surround";
   font-size: clamp(32px, 4.5vw, 64px);
   color: #ffffff;
   margin-bottom: 20px;
@@ -628,7 +644,7 @@
 }
 
 .apply-subtitle {
-  font-family: "Cafe24 Ssurround", sans-serif;
+  font-family: "Cafe24Surround";
   font-size: clamp(18px, 2.5vw, 32px);
   color: #ffffff;
   margin-bottom: 15px;
@@ -653,7 +669,7 @@
   height: 110px;
   background: #797979;
   border-radius: 55px;
-  font-family: "Baloo Bhaijaan", sans-serif;
+  font-family: "Cafe24Surround";
   font-size: clamp(24px, 3vw, 36px);
   color: #ffffff;
   text-decoration: none;

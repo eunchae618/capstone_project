@@ -6,13 +6,14 @@ from app.database import engine, Base, DATABASE_FILE
 import os
 
 # 데이터베이스 테이블 생성
-# 기존 테이블이 있으면 스키마 변경을 위해 삭제 후 재생성 (개발 환경용)
-# 운영 환경에서는 마이그레이션 도구 사용 권장
-try:
-    Base.metadata.drop_all(bind=engine)
-except Exception:
-    pass
-Base.metadata.create_all(bind=engine)
+# DB 파일이 존재하지 않을 때만 테이블 생성
+if not os.path.exists(DATABASE_FILE):
+    print(f"데이터베이스 파일이 없습니다. 새로 생성합니다: {DATABASE_FILE}")
+    Base.metadata.create_all(bind=engine)
+else:
+    print(f"기존 데이터베이스 파일을 사용합니다: {DATABASE_FILE}")
+    # 기존 DB가 있으면 테이블이 없을 경우에만 생성 (스키마 변경 대응)
+    Base.metadata.create_all(bind=engine)
 
 # 데이터베이스 연결 테스트 (파일 생성 보장)
 try:
